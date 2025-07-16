@@ -3,548 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaron Harrington - Executive Leader & Fundraising Expert</title>
+    <title>Aaron Harrington - Advancement Professional</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
+            color: #24292e;
+            background-color: #ffffff;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-
+        
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            transition: all 0.3s ease;
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e1e4e8;
         }
-
-        .header:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #0366d6;
+            margin-bottom: 8px;
         }
-
-        .headshot {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: white;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #586069;
+            margin-bottom: 16px;
         }
-
-        .headshot:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-
-        .headshot img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .header-content h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .header-content .title {
-            font-size: 1.3em;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
+        
         .contact-info {
             display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 20px;
-            background: rgba(102, 126, 234, 0.1);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: #667eea;
-        }
-
-        .contact-item:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .section {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .section-header {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 20px 30px;
-            font-size: 1.4em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .section-header:hover {
-            background: linear-gradient(45deg, #764ba2, #667eea);
-        }
-
-        .section-content {
-            padding: 30px;
-            max-height: 1000px;
-            overflow: hidden;
-            transition: all 0.5s ease;
-        }
-
-        .section.collapsed .section-content {
-            max-height: 0;
-            padding: 0 30px;
-        }
-
-        .arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .section.collapsed .arrow {
-            transform: rotate(180deg);
-        }
-
-        .experience-item {
-            margin-bottom: 30px;
-            padding: 25px;
-            background: rgba(102, 126, 234, 0.05);
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
-        }
-
-        .experience-item:hover {
-            background: rgba(102, 126, 234, 0.1);
-            transform: translateX(5px);
-        }
-
-        .job-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-
-        .company {
-            font-size: 1.1em;
-            color: #764ba2;
-            margin-bottom: 5px;
-        }
-
-        .date {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-
-        .achievements {
-            list-style: none;
-        }
-
-        .achievements li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .achievements li:before {
-            content: "★";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
         }
-
-        .skill-category {
-            background: rgba(102, 126, 234, 0.05);
+        
+        .contact-info a {
+            color: #0366d6;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            color: #0256d1;
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #24292e;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            color: #586069;
+            margin-bottom: 24px;
+        }
+        
+        .highlight-box {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
             padding: 20px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
+            margin: 20px 0;
         }
-
-        .skill-category:hover {
-            background: rgba(102, 126, 234, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .skill-category h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
+        
         .metrics {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin-top: 20px;
+            margin: 20px 0;
         }
-
-        .metric-card {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
+        
+        .metric {
             text-align: center;
-            transition: all 0.3s ease;
+            padding: 16px;
+            background: #f6f8fa;
+            border-radius: 6px;
         }
-
-        .metric-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
+        
         .metric-number {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0366d6;
+            display: block;
         }
-
-        .summary {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #586069;
+            margin-top: 4px;
         }
-
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
+        
+        .experience-item {
+            margin-bottom: 24px;
+            padding: 16px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .experience-title {
+            font-weight: 600;
+            color: #24292e;
+            font-size: 1.1rem;
+        }
+        
+        .experience-company {
+            color: #0366d6;
+            font-weight: 500;
+        }
+        
+        .experience-date {
+            color: #586069;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .cta {
+            background: #f8f9fa;
+            border: 2px solid #e1e4e8;
+            color: #24292e;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .cta h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #24292e;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+        
+        .cta p:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
             }
             
-            .header-content h1 {
-                font-size: 2em;
+            .header h1 {
+                font-size: 2rem;
             }
             
             .contact-info {
-                justify-content: center;
+                flex-direction: column;
+                gap: 8px;
             }
             
-            .headshot {
-                width: 150px;
-                height: 150px;
+            .metrics {
+                grid-template-columns: 1fr;
             }
-        }
-
-        .floating-cta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .floating-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="headshot" onclick="document.getElementById('headshot-upload').click()">
-                AH
-                <input type="file" id="headshot-upload" accept="image/*" style="display: none;">
-            </div>
-            <div class="header-content">
-                <h1>Aaron Harrington</h1>
-                <div class="title">Transformational Fundraising Executive & Strategic Business Development Leader</div>
-                <div class="contact-info">
-                    <a href="mailto:Aaron.Harrington@gmail.com" class="contact-item">
-                        📧 Aaron.Harrington@gmail.com
-                    </a>
-                    <a href="tel:978-501-6779" class="contact-item">
-                        📞 (978) 501-6779
-                    </a>
-                    <a href="https://www.linkedin.com/in/aaron-w-harrington/" class="contact-item" target="_blank">
-                        💼 LinkedIn Profile
-                    </a>
-                    <div class="contact-item">
-                        📍 Beverly, MA
-                    </div>
-                </div>
-            </div>
+    <div class="header">
+        <h1>Aaron Harrington</h1>
+        <div class="subtitle">Advancement Professional & Strategic Partnership Builder</div>
+        <div class="contact-info">
+            <a href="mailto:aaron.harrington@gmail.com">aaron.harrington@gmail.com</a>
+            <a href="tel:978-501-6779">(978) 501-6779</a>
+            <span>Beverly, MA</span>
+            <a href="https://www.linkedin.com/in/aaron-w-harrington/" target="_blank">LinkedIn</a>
         </div>
-
-        <div class="section">
-            <div class="section-header" onclick="toggleSection(this)">
-                Professional Summary
-                <span class="arrow">▼</span>
-            </div>
-            <div class="section-content">
-                <div class="summary">
-                    Transformational Fundraising Executive & Strategic Business Development Leader with 15+ years securing $70M+ in revenue through major gift cultivation, strategic partnerships, and innovative financing models at non-profits. Proven track record building mission-driven organizations, stabilizing operations during critical transitions, and expanding market reach through collaborative stakeholder engagement.
-                </div>
-                <div class="metrics">
-                    <div class="metric-card">
-                        <div class="metric-number">$70M+</div>
-                        <div>Revenue Secured</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">15+</div>
-                        <div>Years Experience</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">95%</div>
-                        <div>Donor Retention Rate</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">150+</div>
-                        <div>Strategic Partnerships</div>
-                    </div>
-                </div>
-            </div>
+    </div>
+    
+    <div class="section">
+        <h2>About Me</h2>
+        <div class="intro">
+            I'm a fundraising professional who has spent 15 years building relationships that matter and raising money for causes I believe in. My career has taken me from leading a $70 million campaign that exceeded its goal by $5.6 million to stepping into crisis situations where organizations needed someone who could think fast, build trust, and deliver results.
         </div>
-
-        <div class="section">
-            <div class="section-header" onclick="toggleSection(this)">
-                Professional Experience
-                <span class="arrow">▼</span>
+        
+        <p>What drives me is connecting with people who are tackling meaningful challenges. I get energized by those conversations where you can feel the passion behind someone's work—whether it's a university leader envisioning expanded student support or immigration advocates fighting for families navigating complex systems. There's something powerful about finding the intersection between what people care about and what organizations need to accomplish.</p>
+        
+        <p>I've learned that the best fundraising isn't about transactions—it's about understanding what motivates people to give and creating authentic partnerships that serve everyone involved. That philosophy has helped me build lasting relationships with donors, board members, and institutional partners who trust me to deliver on what I promise. My strength lies in being genuinely relational and finding ways to connect people's passions with organizational needs.</p>
+    </div>
+    
+    <div class="highlight-box">
+        <div class="metrics">
+            <div class="metric">
+                <span class="metric-number">$70M+</span>
+                <div class="metric-label">Total Revenue Raised</div>
             </div>
-            <div class="section-content">
-                <div class="experience-item">
-                    <div class="job-title">Interim Executive Director</div>
-                    <div class="company">Open Door Immigration Services | Beverly, MA</div>
-                    <div class="date">Feb 2023 - Feb 2024</div>
-                    <ul class="achievements">
-                        <li>Provided crisis leadership during critical transition, implementing strategic revenue model adjustments securing long-term financial viability</li>
-                        <li>Cultivated strategic relationships with USCIS and consulate representatives, ensuring regulatory compliance</li>
-                        <li>Spearheaded 40% service expansion while reducing operational costs by 25%</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-title">Head of Business Development</div>
-                    <div class="company">ReUp Education | Austin, TX</div>
-                    <div class="date">Oct 2018 - Feb 2023</div>
-                    <ul class="achievements">
-                        <li>Led partnership strategies with educational institutions expanding market reach across 35 states</li>
-                        <li>Negotiated 60+ high-value partnerships, averaging $15M+ in new revenue per year</li>
-                        <li>Built strategic relationships with school leadership, state education officials, and federal administrators</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-title">Campaign Director</div>
-                    <div class="company">Gordon-Conwell Theological Seminary | South Hamilton, MA</div>
-                    <div class="date">Oct 2010 - Sep 2017</div>
-                    <ul class="achievements">
-                        <li>Successfully led and exceeded $70,000,000 fundraising campaign (goal: $65M), securing 1,200+ major gifts</li>
-                        <li>Pioneered student fundraising initiative in collaboration with IRS, creating a sustainable revenue stream</li>
-                        <li>Managed 12-person development team across 4 locations and portfolio of 100+ major donors, achieving 95% retention rate and 40% average gift increase</li>
-                    </ul>
-                </div>
+            <div class="metric">
+                <span class="metric-number">95%</span>
+                <div class="metric-label">Donor Retention Rate</div>
             </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header" onclick="toggleSection(this)">
-                Core Competencies
-                <span class="arrow">▼</span>
+            <div class="metric">
+                <span class="metric-number">60+</span>
+                <div class="metric-label">Strategic Partnerships</div>
             </div>
-            <div class="section-content">
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Strategic Fundraising</h4>
-                        <p>Major Gift Cultivation • Campaign Leadership • Grant Writing • Foundation Relations • Revenue Model Innovation • Planned Giving Programs</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Business Development</h4>
-                        <p>National Partnership Negotiation • Market Expansion • Strategic Procurement • Government Relations • International Partnership Development</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Executive Leadership</h4>
-                        <p>Organizational Stabilization • Board Development • Strategic Planning • Crisis Management • Performance Metrics & CRM Management</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Communication</h4>
-                        <p>Multi-Stakeholder Engagement • Persuasive Presentation • Conflict Resolution • Cross-Cultural Communication • Brand Development</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header" onclick="toggleSection(this)">
-                Leadership & Community Impact
-                <span class="arrow">▼</span>
-            </div>
-            <div class="section-content">
-                <div class="experience-item">
-                    <div class="job-title">Board President</div>
-                    <div class="company">Open Door Immigration Services</div>
-                    <div class="date">Apr 2018 - Feb 2023</div>
-                    <ul class="achievements">
-                        <li>Provided strategic governance oversight during organizational growth</li>
-                        <li>Guided policy development and executive transition planning</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-title">Board President</div>
-                    <div class="company">New England Seafarers Mission</div>
-                    <div class="date">Apr 2011 - Mar 2018</div>
-                    <ul class="achievements">
-                        <li>Directed organizational strategic planning, expanding service reach by 60%</li>
-                        <li>Coordinated international partnerships with maritime organizations across 15 countries</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-title">Community Recognition</div>
-                    <div class="company">Awards & Consulting</div>
-                    <ul class="achievements">
-                        <li>Massachusetts Winner: Congressman Seth Moulton 2023 Peter J. Gomes Service Award</li>
-                        <li>Strategic Consulting: Anchor Bay Health procurement consultant</li>
-                        <li>Food Security Advocate: Active supporter of The Daily Table and CSA initiatives</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-header" onclick="toggleSection(this)">
-                Education & Certifications
-                <span class="arrow">▼</span>
-            </div>
-            <div class="section-content">
-                <div class="experience-item">
-                    <div class="job-title">Bachelor of Science</div>
-                    <div class="company">Gordon College | Wenham, MA</div>
-                    <div class="date">2003-2007</div>
-                    <ul class="achievements">
-                        <li>Kinesiology & Psychology • Dean's List • President's Scholar Award</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-title">Professional Certifications</div>
-                    <ul class="achievements">
-                        <li>Emergency Medical Services: Wilderness EMT & Wilderness First Responder</li>
-                        <li>Outdoor Leadership: National Outdoor Leadership School Graduate</li>
-                        <li>Specialized Skills: National Ski Patrol Member & PSIA Certified</li>
-                    </ul>
-                </div>
+            <div class="metric">
+                <span class="metric-number">15+</span>
+                <div class="metric-label">Years Experience</div>
             </div>
         </div>
     </div>
-
-    <a href="mailto:Aaron.Harrington@gmail.com" class="floating-cta">Let's Connect!</a>
-
-    <script>
-        function toggleSection(header) {
-            const section = header.parentElement;
-            section.classList.toggle('collapsed');
-        }
-
-        // Headshot upload functionality
-        document.getElementById('headshot-upload').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const headshotDiv = document.querySelector('.headshot');
-                    headshotDiv.innerHTML = `<img src="${e.target.result}" alt="Aaron Harrington">`;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-
-        // Initialize with some sections collapsed for better UX
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.section');
-            // Keep first two sections open, collapse the rest
-            for (let i = 2; i < sections.length; i++) {
-                sections[i].classList.add('collapsed');
-            }
-        });
-
-        // Add smooth scrolling and entrance animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        });
-
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
-    </script>
+    
+    <div class="section">
+        <h2>What I Do Best</h2>
+        <p><strong>Major Gift Fundraising:</strong> Over seven years, I personally stewarded relationships with 100+ major donors, achieving a 95% retention rate and 40% average gift increase. I led campaign strategy that delivered $70.1 million against a $64.5 million goal.</p>
+        
+        <p><strong>Strategic Partnership Development:</strong> Built national presence for ReUp Education across 35 states, negotiating 60+ institutional partnerships that generated $15 million annually in new revenue.</p>
+        
+        <p><strong>Crisis Leadership:</strong> Stepped into challenging situations where organizations needed someone who could think fast, build trust, and deliver results. At Open Door Immigration Services, I stabilized operations while expanding services by 40% and reducing costs by 25%.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Recent Experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Interim Executive Director</div>
+                    <div class="experience-company">Open Door Immigration Services</div>
+                </div>
+                <div class="experience-date">Feb 2023 - Feb 2024</div>
+            </div>
+            <p>Provided crisis leadership during organizational transition, expanding service capacity by 40% while reducing operational costs by 25%. Built critical relationships with USCIS officials and consulate representatives.</p>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Head of Business Development</div>
+                    <div class="experience-company">ReUp Education</div>
+                </div>
+                <div class="experience-date">Oct 2018 - Feb 2023</div>
+            </div>
+            <p>Led national expansion strategy across 35 states. Negotiated 60+ high-value partnerships generating $15+ million annually. Cultivated relationships with university leadership and federal administrators.</p>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Campaign Director</div>
+                    <div class="experience-company">Gordon-Conwell Theological Seminary</div>
+                </div>
+                <div class="experience-date">Oct 2010 - Sep 2017</div>
+            </div>
+            <p>Exceeded $64.5 million campaign goal by $5.6 million, securing 1,200+ major gifts over seven years. Managed 12-person development team across four locations. Personally stewarded 100+ major donor relationships, achieving 95% retention rate and 40% average gift increase. Developed innovative student fundraising program in partnership with the IRS.</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Recognition & Impact</h2>
+        <p><strong>Massachusetts Winner, Peter J. Gomes Service Award</strong> (2023) - Congressman Seth Moulton</p>
+        <p><strong>Board Leadership:</strong> As Board President of New England Seafarers Mission, established an endowment that now provides a sustainable funding base capable of offsetting annual operations. Built a comprehensive fundraising program so effective that the endowment continues growing while rarely needing to be accessed. Expanded organizational reach by 60% while maintaining financial sustainability and built collaborative network with maritime organizations across 15 countries.</p>
+        <p><strong>Education:</strong> Bachelor of Science, Kinesiology & Psychology, Gordon College (President's Scholar)</p>
+    </div>
+    
+    <div class="cta">
+        <h3>What Drives Results</h3>
+        <p>I've raised over $70 million because I genuinely care about the missions I serve and the people I work with. My strength lies in being genuinely relational and building authentic connections that create lasting partnerships. Every major gift, every strategic partnership, every crisis I've navigated has taught me something about building trust and delivering results under pressure.</p>
+        
+        <p>The work I do connects me with people who are changing lives—whether it's helping a family navigate immigration, supporting students as they complete their education, or enabling a seminary to train the next generation of leaders. It's what makes every conversation meaningful and energizing.</p>
+        
+        <p>Most advancement professionals can either cultivate major donors or build institutional partnerships. I've proven I can do both at scale, in crisis situations, across different sectors, while maintaining the kind of donor retention rates that make CFOs smile. I'm the person who shows up when stakes are high, relationships matter, and results are non-negotiable.</p>
+        
+        <p>Building something that matters and delivering sustainable revenue growth only becomes reality when I genuinely care about the mission. That's when everything I do—from donor cultivation to strategic partnerships—becomes both authentic and unstoppable.</p>
+    </div>
 </body>
 </html>
