@@ -1,31 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Aaron Harrington - CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Harrington - Advancement Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background-color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e1e4e8;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #0366d6;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #586069;
+            margin-bottom: 16px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info a {
+            color: #0366d6;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            color: #0256d1;
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #24292e;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            color: #586069;
+            margin-bottom: 24px;
+        }
+        
+        .highlight-box {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 16px;
+            background: #f6f8fa;
+            border-radius: 6px;
+        }
+        
+        .metric-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0366d6;
+            display: block;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #586069;
+            margin-top: 4px;
+        }
+        
+        .experience-item {
+            margin-bottom: 24px;
+            padding: 16px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .experience-title {
+            font-weight: 600;
+            color: #24292e;
+            font-size: 1.1rem;
+        }
+        
+        .experience-company {
+            color: #0366d6;
+            font-weight: 500;
+        }
+        
+        .experience-date {
+            color: #586069;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .cta {
+            background: #f8f9fa;
+            border: 2px solid #e1e4e8;
+            color: #24292e;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .cta h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #24292e;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+        
+        .cta p:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Aaron Harrington</h1>
-    <h2>Curriculum Vitae</h2>
+    <div class="header">
+        <h1>Aaron Harrington</h1>
+        <div class="subtitle">Advancement Professional & Strategic Partnership Builder</div>
+        <div class="contact-info">
+            <a href="mailto:aaron.harrington@gmail.com">aaron.harrington@gmail.com</a>
+            <a href="tel:978-501-6779">(978) 501-6779</a>
+            <span>Beverly, MA</span>
+            <a href="https://www.linkedin.com/in/aaron-w-harrington/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
     
-    <h3>Contact Information</h3>
-    <p>Email: Aaron.Harrington@gmail.com</p>
-    <p>Phone: (978) 501-6779</p>
-    <p>Location: Beverly, MA</p>
+    <div class="section">
+        <h2>About Me</h2>
+        <div class="intro">
+            I'm a fundraising professional who has spent 15 years building relationships that matter and raising money for causes I believe in. My career has taken me from leading a $70 million campaign that exceeded its goal by $5.6 million to stepping into crisis situations where organizations needed someone who could think fast, build trust, and deliver results.
+        </div>
+        
+        <p>What drives me is connecting with people who are tackling meaningful challenges. I get energized by those conversations where you can feel the passion behind someone's work—whether it's a university leader envisioning expanded student support or immigration advocates fighting for families navigating complex systems. There's something powerful about finding the intersection between what people care about and what organizations need to accomplish.</p>
+        
+        <p>I've learned that the best fundraising isn't about transactions—it's about understanding what motivates people to give and creating authentic partnerships that serve everyone involved. That philosophy has helped me build lasting relationships with donors, board members, and institutional partners who trust me to deliver on what I promise. My strength lies in being genuinely relational and finding ways to connect people's passions with organizational needs.</p>
+    </div>
     
-    <h3>Experience</h3>
-    <p><strong>Your Job Title</strong> - Company Name (Dates)</p>
-    <ul>
-        <li>Add your job responsibilities here</li>
-        <li>Add your achievements here</li>
-    </ul>
+    <div class="highlight-box">
+        <div class="metrics">
+            <div class="metric">
+                <span class="metric-number">$70M+</span>
+                <div class="metric-label">Total Revenue Raised</div>
+            </div>
+            <div class="metric">
+                <span class="metric-number">95%</span>
+                <div class="metric-label">Donor Retention Rate</div>
+            </div>
+            <div class="metric">
+                <span class="metric-number">60+</span>
+                <div class="metric-label">Strategic Partnerships</div>
+            </div>
+            <div class="metric">
+                <span class="metric-number">15+</span>
+                <div class="metric-label">Years Experience</div>
+            </div>
+        </div>
+    </div>
     
-    <h3>Education</h3>
-    <p><strong>Your Degree</strong> - School Name (Year)</p>
+    <div class="section">
+        <h2>What I Do Best</h2>
+        <p><strong>Major Gift Fundraising:</strong> Over seven years, I personally stewarded relationships with 100+ major donors, achieving a 95% retention rate and 40% average gift increase. I led campaign strategy that delivered $70.1 million against a $64.5 million goal.</p>
+        
+        <p><strong>Strategic Partnership Development:</strong> Built national presence for ReUp Education across 35 states, negotiating 60+ institutional partnerships that generated $15 million annually in new revenue.</p>
+        
+        <p><strong>Crisis Leadership:</strong> Stepped into challenging situations where organizations needed someone who could think fast, build trust, and deliver results. At Open Door Immigration Services, I stabilized operations while expanding services by 40% and reducing costs by 25%.</p>
+    </div>
     
-    <h3>Skills</h3>
-    <ul>
-        <li>Add your skills here</li>
-        <li>Add more skills here</li>
-    </ul>
+    <div class="section">
+        <h2>Recent Experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Interim Executive Director</div>
+                    <div class="experience-company">Open Door Immigration Services</div>
+                </div>
+                <div class="experience-date">Feb 2023 - Feb 2024</div>
+            </div>
+            <p>Provided crisis leadership during organizational transition, expanding service capacity by 40% while reducing operational costs by 25%. Built critical relationships with USCIS officials and consulate representatives.</p>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Head of Business Development</div>
+                    <div class="experience-company">ReUp Education</div>
+                </div>
+                <div class="experience-date">Oct 2018 - Feb 2023</div>
+            </div>
+            <p>Led national expansion strategy across 35 states. Negotiated 60+ high-value partnerships generating $15+ million annually. Cultivated relationships with university leadership and federal administrators.</p>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Campaign Director</div>
+                    <div class="experience-company">Gordon-Conwell Theological Seminary</div>
+                </div>
+                <div class="experience-date">Oct 2010 - Sep 2017</div>
+            </div>
+            <p>Exceeded $64.5 million campaign goal by $5.6 million, securing 1,200+ major gifts over seven years. Managed 12-person development team across four locations. Personally stewarded 100+ major donor relationships, achieving 95% retention rate and 40% average gift increase. Developed innovative student fundraising program in partnership with the IRS.</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Recognition & Impact</h2>
+        <p><strong>Massachusetts Winner, Peter J. Gomes Service Award</strong> (2023) - Congressman Seth Moulton</p>
+        <p><strong>Board Leadership:</strong> As Board President of New England Seafarers Mission, established an endowment that now provides a sustainable funding base capable of offsetting annual operations. Built a comprehensive fundraising program so effective that the endowment continues growing while rarely needing to be accessed. Expanded organizational reach by 60% while maintaining financial sustainability and built collaborative network with maritime organizations across 15 countries.</p>
+        <p><strong>Education:</strong> Bachelor of Science, Kinesiology & Psychology, Gordon College (President's Scholar)</p>
+    </div>
+    
+    <div class="cta">
+        <h3>What Drives Results</h3>
+        <p>I've raised over $70 million because I genuinely care about the missions I serve and the people I work with. My strength lies in being genuinely relational and building authentic connections that create lasting partnerships. Every major gift, every strategic partnership, every crisis I've navigated has taught me something about building trust and delivering results under pressure.</p>
+        
+        <p>The work I do connects me with people who are changing lives—whether it's helping a family navigate immigration, supporting students as they complete their education, or enabling a seminary to train the next generation of leaders. It's what makes every conversation meaningful and energizing.</p>
+        
+        <p>Most advancement professionals can either cultivate major donors or build institutional partnerships. I've proven I can do both at scale, in crisis situations, across different sectors, while maintaining the kind of donor retention rates that make CFOs smile. I'm the person who shows up when stakes are high, relationships matter, and results are non-negotiable.</p>
+        
+        <p>Building something that matters and delivering sustainable revenue growth only becomes reality when I genuinely care about the mission. That's when everything I do—from donor cultivation to strategic partnerships—becomes both authentic and unstoppable.</p>
+    </div>
 </body>
 </html>
